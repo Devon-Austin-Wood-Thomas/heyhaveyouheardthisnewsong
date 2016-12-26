@@ -7,7 +7,7 @@ function lyric {
 	read response
 	if [[ $response != $2 ]];
 	then
-		echo "Clearly you have not heard this new song. It's called" 
+		echo -e "\nClearly you have not heard this new song. It's called" 
 		figlet "$songtitle"
 		exit 2
 	fi
@@ -19,7 +19,10 @@ read songtitle
 
 # Convert song name to filename
 filename="$(echo $songtitle | sed -r 's/ /_/g').txt"
-if [ ! -f ./$filename ];
+#absolutepath="$(dirname "$0" | rev | cut -d "/" -f1- | rev)"
+#absolutepath="$absolutepath/$filename"
+#echo $absolutepath
+if [ ! -f $filename ];
 then
 	echo "Clearly you have not heard this new song."
 	exit 1
@@ -42,4 +45,4 @@ for ((i=0; i<=${#lines[@]}; i++)); do
 done
 
 # Passed
-echo "I guess you have heard this new song."
+echo -e "\nI guess you have heard this new song."
