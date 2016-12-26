@@ -21,7 +21,7 @@ then
 	echo "Clearly you have not heard this new song."
 	exit 1
 fi
-echo ""
+echo -e "\n\e[1m\e[4mCloser by The Chainsmokers\e[0m"
 
 # Lyrics test
 lyric "Hey, I was doing just fine before I met you" "I drink too much and that's an issue"
