@@ -20,7 +20,7 @@ read songtitle
 # Convert song name to filename
 filename="$(echo $songtitle | sed -r 's/ /_/g').txt"
 absolutepath="$(dirname "$0" | rev | cut -d "/" -f1- | rev)"
-absolutepath="$absolutepath/$filename"
+absolutepath="$absolutepath/Lyrics/$filename"
 if [ ! -f $absolutepath ];
 then
 	echo "Clearly you have not heard this new song."
