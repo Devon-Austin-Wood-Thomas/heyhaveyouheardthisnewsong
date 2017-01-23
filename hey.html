@@ -70,8 +70,8 @@
 				}
 				else {
 
-					if(userResponse == hello[2*counter-1]) {
-						document.getElementById("bodyLyrics").innerHTML += userResponse + "<br /><br />";
+					if(userResponse.toUpperCase() == hello[2*counter-1].toUpperCase()) {
+						document.getElementById("bodyLyrics").innerHTML += hello[2*counter-1] + "<br /><br />";
 						document.getElementById("bodyLyrics").innerHTML += "<b>" + hello[2*counter] + "</b><br /><br />";
 						document.getElementById("userInput").value = "";
 						counter++;
