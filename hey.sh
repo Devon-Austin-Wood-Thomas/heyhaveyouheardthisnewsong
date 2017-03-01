@@ -7,7 +7,7 @@ function lyric {
 	read response
 	if [[ $response != $2 ]];
 	then
-		echo -e "\nClearly you have not heard this new song. It's called" 
+		echo -e "\nClearly you have not heard this new song. It's called"
 		figlet "$songtitle"
 		exit 2
 	fi
